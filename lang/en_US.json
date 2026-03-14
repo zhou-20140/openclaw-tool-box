@@ -1,0 +1,32 @@
+{
+    "main":{
+        "title":"openclaw tool box",
+        "start":"start",
+        "start_with_port":"start(user defined port)",
+        "stop":"stop",
+        "restart":"restart",
+        "update":"update",
+        "fix":"fix",
+        "tool_box_setting":"tool box setting",
+        "console":"console",
+        "input_port":"input a port: ",
+        "back_main_menu":"Press B key to back to the menu."
+    },
+    "setting":{
+        "about_context":[
+            "about",
+            "-----------------------------------------------------------------",
+            "Author: zhou-20140",
+            "Introduction: This tool is designed for beginners who are not familiar with the console, ",
+            "making it easier and simpler for everyone to use OpenClaw.",
+            "I've replaced commands with simple options, making it easy to understand.",
+            "-----------------------------------------------------------------"
+            ],
+        "back_setting_menu":"Press B key to back to the menu.",
+        "title":"openclaw tool box setting",
+        "back":"back",
+        "about":"about",
+        "language":"language",
+        "exit":"exit"
+    }
+}
