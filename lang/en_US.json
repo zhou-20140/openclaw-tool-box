@@ -10,7 +10,8 @@
         "tool_box_setting":"tool box setting",
         "console":"console",
         "input_port":"input a port: ",
-        "back_main_menu":"Press B key to back to the menu."
+        "back_main_menu":"Press B key to back to the menu.",
+        "tips":"Use the up and down arrow keys to navigate, press Enter to select.(Note: This tool requires ASCII escape characters.)"
     },
     "setting":{
         "about_context":[

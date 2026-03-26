@@ -52,6 +52,7 @@ def main_menu():
     print(main_text["tool_box_setting"])
 
     print("-----------------------")
+    print(main_text["tips"])
 
 def main_menu_loop():
     global main_button_num

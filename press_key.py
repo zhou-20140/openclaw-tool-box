@@ -1,18 +1,9 @@
 import sys
 
 def get_pressed_key():
-    """
-    检测按下的按键（支持上下方向键，跨平台，非阻塞）
-    返回值：
-    - 普通键：字符（如 'a'、'1'）
-    - 方向键：'UP'（上）、'DOWN'（下）
-    - 特殊键：'ESC'、'ENTER' 等
-    - 无按键：None
-    """
     if sys.platform == 'win32':
         # ========== Windows 系统 ==========
         import msvcrt
-        """Windows 专用按键检测（阻塞+非阻塞结合）"""
         if msvcrt.kbhit():
             # 读取第一个字节
             key = msvcrt.getch()
