@@ -10,7 +10,9 @@
         "tool_box_setting":"工具箱设置",
         "console":"控制台",
         "input_port":"输入端口: ",
+        "chose":"是否确认卸载openclaw（y/n): ",
         "back_main_menu":"按下B键返回",
+        "uninstall":"卸载openclaw",
         "tips":"使用上下键控制，enter进入,(注：本工具需要ascll转义)"
     },
     "setting":{

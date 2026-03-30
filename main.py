@@ -4,7 +4,7 @@ from setting import setting_menu_loop
 import json
 
 main_button_num=1
-max_main_menu=7
+max_main_menu=8
 
 main_text={}
 def input_lang():
@@ -49,6 +49,10 @@ def main_menu():
 
     if(main_button_num==7): print(choose_button['y'],end='')
     else: print(choose_button['n'],end='')
+    print(main_text["uninstall"])
+
+    if(main_button_num==8): print(choose_button['y'],end='')
+    else: print(choose_button['n'],end='')
     print(main_text["tool_box_setting"])
 
     print("-----------------------")
@@ -87,7 +91,7 @@ def operation_main_menu():
 
     #优先判断
 
-    if(main_button_num==7):
+    if(main_button_num==8):
         setting_menu_loop()
         input_lang()
         print('\033[H\033[2J', end='', flush=True)
@@ -111,6 +115,13 @@ def operation_main_menu():
         sp.call("openclaw update", shell=True)
     if(main_button_num==6):
         sp.call("openclaw doctor --fix", shell=True)
+    if(main_button_num==7):
+        ask=input(main_text["chose"])
+        while(not (ask=="y" or ask=="n")):
+            ask=input(main_text["chose"])
+        if(ask=='y'):
+            sp.call("openclaw uninstall", shell=True)
+            sp.call("npm uninstall -g openclaw",shell=True)
 
     print("\n"*2+"-----------------------")
     print(main_text["back_main_menu"])

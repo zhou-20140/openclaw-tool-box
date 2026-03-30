@@ -103,3 +103,5 @@ def setting_menu():
     if(setting_button_num==4): print(choose_button['y'],end='')
     else: print(choose_button['n'],end='')
     print(setting_text["exit"])
+
+    print("-----------------------")

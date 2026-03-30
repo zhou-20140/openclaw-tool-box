@@ -10,7 +10,9 @@
         "tool_box_setting":"tool box setting",
         "console":"console",
         "input_port":"input a port: ",
+        "chose":"Are you sure you want to uninstall openclaw (y/n): ",
         "back_main_menu":"Press B key to back to the menu.",
+        "uninstall":"uninstall openclaw",
         "tips":"Use the up and down arrow keys to navigate, press Enter to select.(Note: This tool requires ASCII escape characters.)"
     },
     "setting":{
