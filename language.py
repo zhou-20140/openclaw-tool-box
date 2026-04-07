@@ -54,6 +54,8 @@ def language_menu():
     print('\033[H\033[2J', end='', flush=True)
     choose_button={'y':"> ",'n':"  "}
 
+    print('------------------')
+
     if(language_button_num==1): print(choose_button['y'],end='')
     else: print(choose_button['n'],end='')
     print("English")
@@ -61,4 +63,6 @@ def language_menu():
     if(language_button_num==2): print(choose_button['y'],end='')
     else: print(choose_button['n'],end='')
     print("简体中文")
+
+    print('------------------')
     
