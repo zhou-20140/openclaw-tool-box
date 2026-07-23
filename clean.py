@@ -1,12 +1,9 @@
+import sys
+import subprocess as sp
 def clear_screen():
-    import sys
-    import os
-    os = sys.platform
-    if os == "win32":
-        import os
-        os.system('cls')
-    if os == "linux" or os == "darwin":
-        import os
-        os.system('clear')
+    if sys.platform == "win32":
+        sp.run(['cls'], shell=True)
+    if sys.platform == "linux" or sys.platform == "darwin":
+        sp.run(['clear'], shell=True)
     else:
         print("\033c",flush=True)
