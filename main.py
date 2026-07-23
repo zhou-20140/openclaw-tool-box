@@ -1,10 +1,12 @@
 import press_key as pk
 import subprocess as sp
 from setting import setting_menu_loop
+from clean import clear_screen
+from manage_openclaw import *
 import json
 
 main_button_num=1
-max_main_menu=8
+max_main_menu=9
 
 main_text={}
 def input_lang():
@@ -53,15 +55,18 @@ def main_menu():
 
     if(main_button_num==8): print(choose_button['y'],end='')
     else: print(choose_button['n'],end='')
+    print(main_text["install"])
+
+    if(main_button_num==9): print(choose_button['y'],end='')
+    else: print(choose_button['n'],end='')
     print(main_text["tool_box_setting"])
 
     print("-----------------------")
-    print(main_text["tips"])
 
 def main_menu_loop():
     global main_button_num
 
-    print('\033[H\033[2J', end='')
+    clear_screen()
     main_menu()
 
     while True:
@@ -83,18 +88,18 @@ def main_menu_loop():
             main_button_num=1;flag=0
         
         if(flag):
-            print('\033[H\033[2J', end='', flush=True)
+            clear_screen()
             main_menu()  
 
 def operation_main_menu():
-    print('\033[H\033[2J', end='', flush=True)
+    clear_screen()
 
     #优先判断
 
-    if(main_button_num==8):
+    if(main_button_num==9):
         setting_menu_loop()
         input_lang()
-        print('\033[H\033[2J', end='', flush=True)
+        clear_screen()
         main_menu()
         return 0
 
@@ -104,9 +109,11 @@ def operation_main_menu():
 
     if(main_button_num==1):
         sp.call("openclaw gateway start", shell=True)
+        sp.call("openclaw dashboard", shell=True)
     if(main_button_num==2):
         port=input("输入端口: ")
         sp.call("openclaw gateway --port "+port, shell=True)
+        sp.call("openclaw dashboard", shell=True)
     if(main_button_num==3):
         sp.call("openclaw gateway stop", shell=True)
     if(main_button_num==4):
@@ -116,18 +123,15 @@ def operation_main_menu():
     if(main_button_num==6):
         sp.call("openclaw doctor --fix", shell=True)
     if(main_button_num==7):
-        ask=input(main_text["chose"])
-        while(not (ask=="y" or ask=="n")):
-            ask=input(main_text["chose"])
-        if(ask=='y'):
-            sp.call("openclaw uninstall", shell=True)
-            sp.call("npm uninstall -g openclaw",shell=True)
+        uninstall_openclaw()
+    if(main_button_num==8):
+        install_openclaw()
 
     print("\n"*2+"-----------------------")
     print(main_text["back_main_menu"])
     while(pk.get_pressed_key()!='b'): pass
 
-    print('\033[H\033[2J', end='', flush=True)
+    clear_screen()
     main_menu()
 
 main_menu_loop()

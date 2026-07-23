@@ -13,7 +13,9 @@
         "chose":"Are you sure you want to uninstall openclaw (y/n): ",
         "back_main_menu":"Press B key to back to the menu.",
         "uninstall":"uninstall openclaw",
-        "tips":"Use the up and down arrow keys to navigate, press Enter to select.(Note: This tool requires ASCII escape characters.)"
+        "install":"install openclaw",
+        "agree_y":"Please press the y key to continue, otherwise it will fail.",
+        "install_win":"This will open a new window to install openclaw, please wait patiently for the installation to complete, and do not close the window during the installation process."
     },
     "setting":{
         "about_context":[

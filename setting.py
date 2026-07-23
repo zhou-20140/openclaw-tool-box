@@ -1,4 +1,5 @@
 import press_key as pk
+from clean import clear_screen
 import json
 
 setting_button_num=1
@@ -21,7 +22,7 @@ from language import language_menu_loop
 def setting_menu_loop():
     global setting_button_num
 
-    print('\033[H\033[2J', end='', flush=True)
+    clear_screen()
     setting_menu()
 
     input_lang()
@@ -49,7 +50,7 @@ def setting_menu_loop():
 
         
         if(flag):
-            print('\033[H\033[2J', end='', flush=True)
+            clear_screen()
             setting_menu()
 
 def operation_setting_menu():
@@ -58,30 +59,30 @@ def operation_setting_menu():
         return 1
     
     if(setting_button_num==2):
-        print('\033[H\033[2J', end='', flush=True)
+        clear_screen()
         for i in about:
             print(i)
         print(setting_text["back_setting_menu"])
         while(pk.get_pressed_key()!='b'): pass
-        print('\033[H\033[2J', end='', flush=True)
+        clear_screen()
         setting_menu()
 
     if(setting_button_num==3):
         language_menu_loop()
-        print('\033[H\033[2J', end='', flush=True)
+        clear_screen()
         input_lang()
         setting_menu()
         return 0
 
     if(setting_button_num==4):
-        print('\033[H\033[2J', end='', flush=True)
+        clear_screen()
         exit()
 
     return 0
 
 
 def setting_menu():
-    print('\033[H\033[2J', end='', flush=True)
+    clear_screen()
     choose_button={'y':"> ",'n':"  "}
 
     #-------menu-------#

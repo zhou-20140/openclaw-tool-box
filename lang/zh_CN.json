@@ -13,7 +13,9 @@
         "chose":"是否确认卸载openclaw（y/n): ",
         "back_main_menu":"按下B键返回",
         "uninstall":"卸载openclaw",
-        "tips":"使用上下键控制，enter进入,(注：本工具需要ascll转义)"
+        "install":"安装openclaw",
+        "agree_y":"请按下y键继续，否则会失败",
+        "install_win":"这将会打开一个新的窗口安装openclaw，请耐心等待安装完成，安装过程中请不要关闭窗口。"
     },
     "setting":{
         "about_context":[
